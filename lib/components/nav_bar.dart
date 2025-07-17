@@ -53,7 +53,7 @@ class NavBar extends StatelessComponent {
         AppButton(
           label: 'RESUME',
           href:
-              "https://drive.google.com/drive/u/0/folders/1E6NxJlmnW2lTYTszcbODdpXiPFYe_kBM",
+              "https://drive.google.com/file/d/1tVGiW1dwgUmNTEBpqwp9gLFMTrM18Fps/view?usp=sharing",
         ),
       ]),
     ]);

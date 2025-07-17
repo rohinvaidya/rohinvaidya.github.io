@@ -32,7 +32,7 @@ class BasicInfoSection extends StatelessComponent {
         span(classes: 'subtitle', [
           i(classes: 'fa-solid fa-play play-icon', []),
           span(classes: 'dynamic-subtitles', [
-            text('Flutter Enthusiast'),
+            text('Web Development Enthusiast'),
           ])
         ]),
         div(classes: 'socials', [
