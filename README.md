@@ -16,7 +16,7 @@ Its a portfolio website for developers developed using [Jaspr](https://docs.page
 ## 🧑 Author
 
 #### Rohin Vaidya
-[![LinkedIn Link]()](https://www.linkedin.com/in/rohinvaidya)
+[![LinkedIn Link]()](https://www.linkedin.com/in/rohin-vaidya)
 
 You can also follow my GitHub Profile to stay updated about my latest projects:
 

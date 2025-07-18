@@ -7,7 +7,7 @@
         "phone": "+1 (240) 879-8960",
         "address": "College Park, Maryland",
         "photos": [
-            "images/photos/bw.png",
+            "images/photos/black-white.png",
             "images/photos/colored.png",
             "images/photos/mobile.png"
         ],
@@ -16,7 +16,7 @@
     "socials": [
         {
             "icon": "fa-brands fa-linkedin",
-            "url": "https://www.linkedin.com/in/rohinvaidya/"
+            "url": "https://www.linkedin.com/in/rohin-vaidya/"
         },
         {
             "icon": "fa-brands fa-github",
