@@ -1,6 +1,6 @@
 import 'package:jaspr/jaspr.dart';
 
-import 'pages/home.dart';
+import 'components/data_loader.dart';
 
 // The main component of your application.
 //
@@ -42,7 +42,7 @@ class AppState extends State<App> {
 
     // Renders a <div class="main"> html element with children.
     yield div(classes: 'main', [
-      Home(),
+      DataLoader(),
     ]);
   }
 

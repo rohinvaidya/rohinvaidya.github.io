@@ -1,4 +1,5 @@
 import 'package:freezed_annotation/freezed_annotation.dart';
+import 'package:jaspr/jaspr.dart';
 
 part 'basic.freezed.dart';
 part 'basic.g.dart';
@@ -16,5 +17,9 @@ class Basic with _$Basic {
     required String resume,
   }) = _Basic;
 
+  @decoder
   factory Basic.fromJson(Map<String, Object?> json) => _$BasicFromJson(json);
+  
+  @encoder
+  Map<String, Object?> toJson() => _$BasicToJson(this);
 }

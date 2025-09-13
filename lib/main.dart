@@ -34,6 +34,8 @@ void main() {
             'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css',
         rel: 'stylesheet',
       ),
+      // Links to the compiled web/main.dart file for client-side hydration
+      script(src: 'main.dart.js', []),
     ],
     charset: 'utf-8',
     viewport: 'width=device-width, initial-scale=1, shrink-to-fit=no',

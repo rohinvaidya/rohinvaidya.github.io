@@ -25,12 +25,8 @@ mixin _$About {
   List<Work> get works => throw _privateConstructorUsedError;
   String get heading => throw _privateConstructorUsedError;
 
-  /// Serializes this About to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-
-  /// Create a copy of About
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   $AboutCopyWith<About> get copyWith => throw _privateConstructorUsedError;
 }
 
@@ -56,8 +52,6 @@ class _$AboutCopyWithImpl<$Res, $Val extends About>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
-  /// Create a copy of About
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -109,8 +103,6 @@ class __$$AboutImplCopyWithImpl<$Res>
       _$AboutImpl _value, $Res Function(_$AboutImpl) _then)
       : super(_value, _then);
 
-  /// Create a copy of About
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -192,7 +184,7 @@ class _$AboutImpl implements _About {
             (identical(other.heading, heading) || other.heading == heading));
   }
 
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(
       runtimeType,
@@ -201,9 +193,7 @@ class _$AboutImpl implements _About {
       const DeepCollectionEquality().hash(_works),
       heading);
 
-  /// Create a copy of About
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
   _$$AboutImplCopyWith<_$AboutImpl> get copyWith =>
@@ -234,11 +224,8 @@ abstract class _About implements About {
   List<Work> get works;
   @override
   String get heading;
-
-  /// Create a copy of About
-  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   _$$AboutImplCopyWith<_$AboutImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

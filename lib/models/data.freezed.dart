@@ -27,12 +27,8 @@ mixin _$Data {
   List<Project> get projects => throw _privateConstructorUsedError;
   List<Contact> get contact => throw _privateConstructorUsedError;
 
-  /// Serializes this Data to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-
-  /// Create a copy of Data
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   $DataCopyWith<Data> get copyWith => throw _privateConstructorUsedError;
 }
 
@@ -63,8 +59,6 @@ class _$DataCopyWithImpl<$Res, $Val extends Data>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
-  /// Create a copy of Data
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -103,8 +97,6 @@ class _$DataCopyWithImpl<$Res, $Val extends Data>
     ) as $Val);
   }
 
-  /// Create a copy of Data
-  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $BasicCopyWith<$Res> get basic {
@@ -113,8 +105,6 @@ class _$DataCopyWithImpl<$Res, $Val extends Data>
     });
   }
 
-  /// Create a copy of Data
-  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $AboutCopyWith<$Res> get about {
@@ -152,8 +142,6 @@ class __$$DataImplCopyWithImpl<$Res>
   __$$DataImplCopyWithImpl(_$DataImpl _value, $Res Function(_$DataImpl) _then)
       : super(_value, _then);
 
-  /// Create a copy of Data
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -265,7 +253,7 @@ class _$DataImpl implements _Data {
             const DeepCollectionEquality().equals(other._contact, _contact));
   }
 
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(
       runtimeType,
@@ -276,9 +264,7 @@ class _$DataImpl implements _Data {
       const DeepCollectionEquality().hash(_projects),
       const DeepCollectionEquality().hash(_contact));
 
-  /// Create a copy of Data
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
   _$$DataImplCopyWith<_$DataImpl> get copyWith =>
@@ -315,11 +301,8 @@ abstract class _Data implements Data {
   List<Project> get projects;
   @override
   List<Contact> get contact;
-
-  /// Create a copy of Data
-  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   _$$DataImplCopyWith<_$DataImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

@@ -1,4 +1,5 @@
 import 'package:freezed_annotation/freezed_annotation.dart';
+import 'package:jaspr/jaspr.dart';
 
 part 'social.freezed.dart';
 part 'social.g.dart';
@@ -10,5 +11,9 @@ class Social with _$Social {
     required String url,
   }) = _Social;
 
+  @decoder
   factory Social.fromJson(Map<String, Object?> json) => _$SocialFromJson(json);
+  
+  @encoder
+  Map<String, Object?> toJson() => _$SocialToJson(this);
 }

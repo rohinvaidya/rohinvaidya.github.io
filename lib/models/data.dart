@@ -5,6 +5,7 @@ import 'package:devfolio/models/project.dart';
 import 'package:devfolio/models/service_data.dart';
 import 'package:devfolio/models/social.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
+import 'package:jaspr/jaspr.dart';
 
 part 'data.freezed.dart';
 part 'data.g.dart';
@@ -20,5 +21,9 @@ class Data with _$Data {
     required List<Contact> contact,
   }) = _Data;
 
+  @decoder
   factory Data.fromJson(Map<String, Object?> json) => _$DataFromJson(json);
+  
+  @encoder
+  Map<String, Object?> toJson() => _$DataToJson(this);
 }

@@ -1,5 +1,6 @@
 import 'package:devfolio/models/work.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
+import 'package:jaspr/jaspr.dart';
 
 part 'about.freezed.dart';
 part 'about.g.dart';
@@ -13,5 +14,9 @@ class About with _$About {
     required String heading,
   }) = _About;
 
+  @decoder
   factory About.fromJson(Map<String, Object?> json) => _$AboutFromJson(json);
+  
+  @encoder
+  Map<String, Object?> toJson() => _$AboutToJson(this);
 }

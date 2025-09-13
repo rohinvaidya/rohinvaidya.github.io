@@ -1,4 +1,5 @@
 import 'package:freezed_annotation/freezed_annotation.dart';
+import 'package:jaspr/jaspr.dart';
 
 part 'project.freezed.dart';
 part 'project.g.dart';
@@ -13,6 +14,9 @@ class Project with _$Project {
     required String link,
   }) = _Project;
 
-  factory Project.fromJson(Map<String, Object?> json) =>
-      _$ProjectFromJson(json);
+  @decoder
+  factory Project.fromJson(Map<String, Object?> json) => _$ProjectFromJson(json);
+  
+  @encoder
+  Map<String, Object?> toJson() => _$ProjectToJson(this);
 }

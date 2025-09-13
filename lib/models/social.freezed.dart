@@ -23,12 +23,8 @@ mixin _$Social {
   String get icon => throw _privateConstructorUsedError;
   String get url => throw _privateConstructorUsedError;
 
-  /// Serializes this Social to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-
-  /// Create a copy of Social
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   $SocialCopyWith<Social> get copyWith => throw _privateConstructorUsedError;
 }
 
@@ -50,8 +46,6 @@ class _$SocialCopyWithImpl<$Res, $Val extends Social>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
-  /// Create a copy of Social
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -89,8 +83,6 @@ class __$$SocialImplCopyWithImpl<$Res>
       _$SocialImpl _value, $Res Function(_$SocialImpl) _then)
       : super(_value, _then);
 
-  /// Create a copy of Social
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -137,13 +129,11 @@ class _$SocialImpl implements _Social {
             (identical(other.url, url) || other.url == url));
   }
 
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(runtimeType, icon, url);
 
-  /// Create a copy of Social
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
   _$$SocialImplCopyWith<_$SocialImpl> get copyWith =>
@@ -167,11 +157,8 @@ abstract class _Social implements Social {
   String get icon;
   @override
   String get url;
-
-  /// Create a copy of Social
-  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   _$$SocialImplCopyWith<_$SocialImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

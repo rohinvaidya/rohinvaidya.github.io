@@ -1,6 +1,3 @@
-import 'dart:convert';
-import 'dart:io';
-
 import 'package:devfolio/components/footer.dart';
 import 'package:devfolio/components/nav_bar.dart';
 import 'package:devfolio/models/data.dart';
@@ -9,23 +6,21 @@ import 'package:devfolio/sections/basic_info.dart';
 import 'package:devfolio/sections/contact.dart';
 import 'package:devfolio/sections/projects.dart';
 import 'package:devfolio/sections/services.dart';
-import 'package:jaspr/server.dart';
+import 'package:jaspr/jaspr.dart';
 
-class Home extends AsyncStatelessComponent {
-  Future<Data> fetchData() async {
-    final String fileResponse =
-        File('${Directory.current.path}/web/data/data.json').readAsStringSync();
-    final Map<String, dynamic> raw =
-        jsonDecode(fileResponse) as Map<String, dynamic>;
+// Make this a client component that receives data as parameters
+@client
+class Home extends StatelessComponent {
+  const Home({
+    required this.data,
+    super.key,
+  });
 
-    final data = Data.fromJson(raw);
-    return data;
-  }
+  // Data passed from server to client via initializing fields
+  final Data data;
 
   @override
-  Stream<Component> build(BuildContext context) async* {
-    final data = await fetchData();
-
+  Iterable<Component> build(BuildContext context) sync* {
     yield div(classes: 'home-body', [
       NavBar(),
       BasicInfoSection(

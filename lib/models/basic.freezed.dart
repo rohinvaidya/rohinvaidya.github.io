@@ -29,12 +29,8 @@ mixin _$Basic {
   List<String> get photos => throw _privateConstructorUsedError;
   String get resume => throw _privateConstructorUsedError;
 
-  /// Serializes this Basic to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-
-  /// Create a copy of Basic
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   $BasicCopyWith<Basic> get copyWith => throw _privateConstructorUsedError;
 }
 
@@ -64,8 +60,6 @@ class _$BasicCopyWithImpl<$Res, $Val extends Basic>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
-  /// Create a copy of Basic
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -141,8 +135,6 @@ class __$$BasicImplCopyWithImpl<$Res>
       _$BasicImpl _value, $Res Function(_$BasicImpl) _then)
       : super(_value, _then);
 
-  /// Create a copy of Basic
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -254,14 +246,12 @@ class _$BasicImpl implements _Basic {
             (identical(other.resume, resume) || other.resume == resume));
   }
 
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(runtimeType, firstName, lastName, age, email,
       phone, address, const DeepCollectionEquality().hash(_photos), resume);
 
-  /// Create a copy of Basic
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
   _$$BasicImplCopyWith<_$BasicImpl> get copyWith =>
@@ -304,11 +294,8 @@ abstract class _Basic implements Basic {
   List<String> get photos;
   @override
   String get resume;
-
-  /// Create a copy of Basic
-  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   _$$BasicImplCopyWith<_$BasicImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

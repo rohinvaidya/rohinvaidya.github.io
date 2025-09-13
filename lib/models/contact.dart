@@ -1,4 +1,5 @@
 import 'package:freezed_annotation/freezed_annotation.dart';
+import 'package:jaspr/jaspr.dart';
 
 part 'contact.freezed.dart';
 part 'contact.g.dart';
@@ -12,6 +13,9 @@ class Contact with _$Contact {
     required String action,
   }) = _Contact;
 
-  factory Contact.fromJson(Map<String, Object?> json) =>
-      _$ContactFromJson(json);
+  @decoder
+  factory Contact.fromJson(Map<String, Object?> json) => _$ContactFromJson(json);
+  
+  @encoder
+  Map<String, Object?> toJson() => _$ContactToJson(this);
 }

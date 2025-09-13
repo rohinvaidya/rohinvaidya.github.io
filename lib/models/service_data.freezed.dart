@@ -23,12 +23,8 @@ mixin _$ServiceData {
   String get icon => throw _privateConstructorUsedError;
   String get title => throw _privateConstructorUsedError;
 
-  /// Serializes this ServiceData to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-
-  /// Create a copy of ServiceData
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   $ServiceDataCopyWith<ServiceData> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -52,8 +48,6 @@ class _$ServiceDataCopyWithImpl<$Res, $Val extends ServiceData>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
-  /// Create a copy of ServiceData
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -92,8 +86,6 @@ class __$$ServiceDataImplCopyWithImpl<$Res>
       _$ServiceDataImpl _value, $Res Function(_$ServiceDataImpl) _then)
       : super(_value, _then);
 
-  /// Create a copy of ServiceData
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -140,13 +132,11 @@ class _$ServiceDataImpl implements _ServiceData {
             (identical(other.title, title) || other.title == title));
   }
 
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(runtimeType, icon, title);
 
-  /// Create a copy of ServiceData
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
   _$$ServiceDataImplCopyWith<_$ServiceDataImpl> get copyWith =>
@@ -172,11 +162,8 @@ abstract class _ServiceData implements ServiceData {
   String get icon;
   @override
   String get title;
-
-  /// Create a copy of ServiceData
-  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   _$$ServiceDataImplCopyWith<_$ServiceDataImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
