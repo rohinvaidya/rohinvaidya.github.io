@@ -16,6 +16,7 @@ class Contact with _$Contact {
   @decoder
   factory Contact.fromJson(Map<String, Object?> json) => _$ContactFromJson(json);
   
+  @override
   @encoder
   Map<String, Object?> toJson() => _$ContactToJson(this);
 }

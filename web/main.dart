@@ -2,7 +2,7 @@
 import 'package:jaspr/browser.dart';
 
 // Our main component
-import '../lib/app.dart';
+import 'package:devfolio/app.dart';
 
 void main() {
   // Attaches the app component to the <body> tag

@@ -17,6 +17,7 @@ class Project with _$Project {
   @decoder
   factory Project.fromJson(Map<String, Object?> json) => _$ProjectFromJson(json);
   
+  @override
   @encoder
   Map<String, Object?> toJson() => _$ProjectToJson(this);
 }

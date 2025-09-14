@@ -1,4 +1,5 @@
 import 'package:freezed_annotation/freezed_annotation.dart';
+import 'package:jaspr/jaspr.dart';
 
 part 'work.freezed.dart';
 part 'work.g.dart';
@@ -11,5 +12,9 @@ class Work with _$Work {
     required int height,
   }) = _Work;
 
+  @decoder
   factory Work.fromJson(Map<String, Object?> json) => _$WorkFromJson(json);
+  
+  @encoder
+  Map<String, Object?> toJson() => _$WorkToJson(this);
 }

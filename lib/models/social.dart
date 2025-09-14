@@ -14,6 +14,7 @@ class Social with _$Social {
   @decoder
   factory Social.fromJson(Map<String, Object?> json) => _$SocialFromJson(json);
   
+  @override
   @encoder
   Map<String, Object?> toJson() => _$SocialToJson(this);
 }

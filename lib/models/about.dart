@@ -17,6 +17,7 @@ class About with _$About {
   @decoder
   factory About.fromJson(Map<String, Object?> json) => _$AboutFromJson(json);
   
+  @override
   @encoder
   Map<String, Object?> toJson() => _$AboutToJson(this);
 }

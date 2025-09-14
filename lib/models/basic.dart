@@ -20,6 +20,7 @@ class Basic with _$Basic {
   @decoder
   factory Basic.fromJson(Map<String, Object?> json) => _$BasicFromJson(json);
   
+  @override
   @encoder
   Map<String, Object?> toJson() => _$BasicToJson(this);
 }

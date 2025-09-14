@@ -24,6 +24,7 @@ class Data with _$Data {
   @decoder
   factory Data.fromJson(Map<String, Object?> json) => _$DataFromJson(json);
   
+  @override
   @encoder
   Map<String, Object?> toJson() => _$DataToJson(this);
 }

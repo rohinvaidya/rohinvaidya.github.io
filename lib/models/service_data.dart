@@ -14,6 +14,7 @@ class ServiceData with _$ServiceData {
   @decoder
   factory ServiceData.fromJson(Map<String, Object?> json) => _$ServiceDataFromJson(json);
   
+  @override
   @encoder
   Map<String, Object?> toJson() => _$ServiceDataToJson(this);
 }
