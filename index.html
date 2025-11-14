@@ -1,12 +1,404 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Rohin Vaidya - Portfolio</title>
-    <link rel="icon" href="favicon.ico">
-  </head>
-  <body>
-    <script src="main.dart.js"></script>
-  </body>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Rohin Vaidya - Software Engineer | Master's student at University of Maryland, College Park">
+    <meta name="author" content="Rohin Vaidya">
+    <title>Rohin Vaidya | Software Engineer</title>
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Favicon -->
+    <link rel="icon" href="web/favicon.ico" type="image/x-icon">
+
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="container">
+            <div class="nav-brand">
+                <a href="#home">Rohin Vaidya</a>
+            </div>
+            <button class="nav-toggle" id="navToggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="#home" class="nav-link">Home</a></li>
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#skills" class="nav-link">Skills</a></li>
+                <li><a href="#experience" class="nav-link">Experience</a></li>
+                <li><a href="#projects" class="nav-link">Projects</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <h1 class="hero-greeting">
+                        Hi <img src="web/images/hi.gif" alt="wave" class="wave-emoji">, I'm
+                    </h1>
+                    <h2 class="hero-name">Rohin Vaidya</h2>
+                    <p class="hero-title">Software Engineer | Full-Stack Developer</p>
+                    <p class="hero-description">
+                        Master's student at the University of Maryland, College Park with 2+ years of web development experience.
+                        Passionate about building scalable cloud applications and AI-driven solutions.
+                    </p>
+                    <div class="hero-buttons">
+                        <a href="#contact" class="btn btn-primary">Get In Touch</a>
+                        <a href="https://drive.google.com/file/d/1tVGiW1dwgUmNTEBpqwp9gLFMTrM18Fps/view?usp=sharing" target="_blank" class="btn btn-secondary">
+                            <i class="fas fa-download"></i> Resume
+                        </a>
+                    </div>
+                    <div class="social-links">
+                        <a href="https://www.linkedin.com/in/rohin-vaidya/" target="_blank" class="social-link" aria-label="LinkedIn">
+                            <i class="fab fa-linkedin"></i>
+                        </a>
+                        <a href="https://github.com/rohinvaidya" target="_blank" class="social-link" aria-label="GitHub">
+                            <i class="fab fa-github"></i>
+                        </a>
+                        <a href="mailto:rohin.vaidya@gmail.com" class="social-link" aria-label="Email">
+                            <i class="fas fa-envelope"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="hero-image">
+                    <div class="image-container">
+                        <img src="web/images/photos/colored.png" alt="Rohin Vaidya" class="profile-img">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="scroll-down">
+            <a href="#about">
+                <i class="fas fa-chevron-down"></i>
+            </a>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <h2 class="section-title">About Me</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <p class="about-intro">
+                        I'm a <strong>Software Engineer</strong> who loves building meaningful products that make a difference.
+                    </p>
+                    <p>
+                        Currently pursuing my Master's in Software Engineering at the University of Maryland, College Park,
+                        I bring 2+ years of professional experience from Oracle Financial Services Software where I designed
+                        and optimized 15+ UI screens and built full-stack solutions processing 500k+ monthly transactions.
+                    </p>
+                    <p>
+                        I'm passionate about cloud computing, open source contributions, and creating innovative solutions
+                        that solve real-world problems. My expertise spans across full-stack development, cloud technologies,
+                        and data analytics.
+                    </p>
+                    <div class="about-highlights">
+                        <div class="highlight-item">
+                            <i class="fas fa-graduation-cap"></i>
+                            <div>
+                                <h4>Education</h4>
+                                <p>Master's in Software Engineering<br>University of Maryland</p>
+                            </div>
+                        </div>
+                        <div class="highlight-item">
+                            <i class="fas fa-briefcase"></i>
+                            <div>
+                                <h4>Experience</h4>
+                                <p>2+ Years in Web Development<br>Oracle Financial Services</p>
+                            </div>
+                        </div>
+                        <div class="highlight-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <div>
+                                <h4>Location</h4>
+                                <p>College Park, Maryland<br>United States</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="skills">
+        <div class="container">
+            <h2 class="section-title">Technical Skills</h2>
+            <div class="skills-content">
+                <div class="skill-category">
+                    <h3><i class="fas fa-code"></i> Programming Languages</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Java</span>
+                        <span class="skill-tag">Python</span>
+                        <span class="skill-tag">JavaScript</span>
+                        <span class="skill-tag">TypeScript</span>
+                        <span class="skill-tag">SQL</span>
+                        <span class="skill-tag">PHP</span>
+                        <span class="skill-tag">C</span>
+                        <span class="skill-tag">HTML/CSS</span>
+                    </div>
+                </div>
+
+                <div class="skill-category">
+                    <h3><i class="fas fa-laptop-code"></i> Web Development</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">React</span>
+                        <span class="skill-tag">Angular</span>
+                        <span class="skill-tag">Node.js</span>
+                        <span class="skill-tag">Express.js</span>
+                        <span class="skill-tag">Spring Boot</span>
+                    </div>
+                </div>
+
+                <div class="skill-category">
+                    <h3><i class="fas fa-cloud"></i> Cloud & DevOps</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Docker</span>
+                        <span class="skill-tag">Google Cloud Platform</span>
+                        <span class="skill-tag">Git</span>
+                        <span class="skill-tag">CI/CD</span>
+                    </div>
+                </div>
+
+                <div class="skill-category">
+                    <h3><i class="fas fa-database"></i> Databases</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Oracle Database</span>
+                        <span class="skill-tag">PostgreSQL</span>
+                        <span class="skill-tag">MongoDB</span>
+                    </div>
+                </div>
+
+                <div class="skill-category">
+                    <h3><i class="fas fa-tools"></i> Testing & Tools</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Selenium</span>
+                        <span class="skill-tag">Maven</span>
+                        <span class="skill-tag">JUnit</span>
+                        <span class="skill-tag">Scikit-learn</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience" class="experience">
+        <div class="container">
+            <h2 class="section-title">Professional Experience</h2>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-date">Aug 2021 - Jun 2024</div>
+                        <h3>Software Engineer</h3>
+                        <h4>Oracle Financial Services Software</h4>
+                        <ul class="experience-list">
+                            <li>Redesigned and optimized 15+ UI screens, improving user experience and system performance</li>
+                            <li>Built full-stack solutions processing 500k+ monthly transactions with high reliability</li>
+                            <li>Achieved 99% deployment success rate through rigorous testing and quality assurance</li>
+                            <li>Accelerated project delivery by 15% through effective cross-functional collaboration</li>
+                            <li>Developed scalable web applications using React, Angular, Spring Boot, and Oracle Database</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-date">2024 - Present</div>
+                        <h3>Master of Engineering in Software Engineering</h3>
+                        <h4>University of Maryland, College Park</h4>
+                        <ul class="experience-list">
+                            <li>Focus on cloud technologies, data analytics, and AI-driven applications</li>
+                            <li>Contributing to open source projects and collaborative innovation</li>
+                            <li>Building expertise in advanced software engineering practices</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-date">2017 - 2021</div>
+                        <h3>Bachelor of Engineering in Information Technology</h3>
+                        <h4>University of Mumbai, India</h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="services">
+        <div class="container">
+            <h2 class="section-title">What I Do</h2>
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">
+                        <img src="web/images/services/app.png" alt="Mobile Development">
+                    </div>
+                    <h3>Mobile Development</h3>
+                    <p>Building cross-platform mobile applications with modern frameworks</p>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">
+                        <img src="web/images/services/ui.png" alt="UI/UX Design">
+                    </div>
+                    <h3>UI/UX Design</h3>
+                    <p>Creating intuitive and beautiful user interfaces</p>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">
+                        <img src="web/images/services/rapid.png" alt="Rapid Prototyping">
+                    </div>
+                    <h3>Rapid Prototyping</h3>
+                    <p>Quickly turning ideas into functional prototypes</p>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">
+                        <img src="web/images/services/blog.png" alt="Technical Writing">
+                    </div>
+                    <h3>Technical Writing</h3>
+                    <p>Documenting complex technical concepts clearly</p>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">
+                        <img src="web/images/services/open.png" alt="Open Source">
+                    </div>
+                    <h3>Open Source</h3>
+                    <p>Contributing to open source projects on GitHub</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="projects">
+        <div class="container">
+            <h2 class="section-title">Featured Projects</h2>
+            <div class="projects-grid">
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="web/images/projects/flutter.png" alt="Awesome Snackbar">
+                        <div class="project-overlay">
+                            <a href="https://pub.dev/packages/awesome_snackbar" target="_blank" class="project-link">
+                                <i class="fas fa-external-link-alt"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3>Awesome Snackbar</h3>
+                        <p>A unique Dart package to enhance the snackbar experience in Flutter applications. Published on pub.dev and used by developers worldwide.</p>
+                        <div class="project-tags">
+                            <span class="project-tag">Flutter</span>
+                            <span class="project-tag">Dart</span>
+                            <span class="project-tag">UI Components</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="web/images/projects/java.png" alt="Full-Stack Solutions">
+                        <div class="project-overlay">
+                            <div class="project-link-static">
+                                <i class="fas fa-code"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3>Enterprise Web Applications</h3>
+                        <p>Developed full-stack solutions at Oracle processing 500k+ monthly transactions with 99% deployment success rate.</p>
+                        <div class="project-tags">
+                            <span class="project-tag">Java</span>
+                            <span class="project-tag">Spring Boot</span>
+                            <span class="project-tag">React</span>
+                            <span class="project-tag">Oracle DB</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2 class="section-title">Get In Touch</h2>
+            <p class="contact-intro">
+                Feel free to reach out if you're interested in collaborating or have any questions!
+            </p>
+            <div class="contact-grid">
+                <a href="https://www.google.com/maps/place/College+Park,+MD/@38.986246,-76.942634,12z" target="_blank" class="contact-card">
+                    <div class="contact-icon">
+                        <i class="fas fa-map-marker-alt"></i>
+                    </div>
+                    <h3>Location</h3>
+                    <p>College Park, MD</p>
+                </a>
+
+                <a href="tel:+12408798960" class="contact-card">
+                    <div class="contact-icon">
+                        <i class="fas fa-phone"></i>
+                    </div>
+                    <h3>Phone</h3>
+                    <p>+1 (240) 879-8960</p>
+                </a>
+
+                <a href="mailto:rohin.vaidya@gmail.com" class="contact-card">
+                    <div class="contact-icon">
+                        <i class="fas fa-envelope"></i>
+                    </div>
+                    <h3>Email</h3>
+                    <p>rohin.vaidya@gmail.com</p>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <p>&copy; 2024 Rohin Vaidya. All rights reserved.</p>
+                <div class="footer-social">
+                    <a href="https://www.linkedin.com/in/rohin-vaidya/" target="_blank" aria-label="LinkedIn">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                    <a href="https://github.com/rohinvaidya" target="_blank" aria-label="GitHub">
+                        <i class="fab fa-github"></i>
+                    </a>
+                    <a href="mailto:rohin.vaidya@gmail.com" aria-label="Email">
+                        <i class="fas fa-envelope"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="script.js"></script>
+</body>
 </html>
