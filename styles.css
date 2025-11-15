@@ -538,6 +538,31 @@ section {
     font-weight: bold;
 }
 
+/* Education Section */
+.education {
+    background: var(--bg-secondary);
+}
+
+.education-list {
+    list-style: none;
+    padding-left: 0;
+}
+
+.education-list li {
+    position: relative;
+    padding-left: 1.5rem;
+    margin-bottom: 0.75rem;
+    color: var(--text-secondary);
+}
+
+.education-list li::before {
+    content: '▹';
+    position: absolute;
+    left: 0;
+    color: var(--primary-color);
+    font-weight: bold;
+}
+
 /* Services Section */
 .services {
     background: var(--bg-primary);
