@@ -1,4 +1,4 @@
-﻿/* Reset and Base Styles */
+/* Reset and Base Styles */
 * {
     margin: 0;
     padding: 0;
@@ -454,7 +454,6 @@ section {
     background: var(--bg-secondary);
 }
 
-/* Outer wrapper — centres the line */
 .timeline {
     position: relative;
     max-width: 1000px;
@@ -462,7 +461,6 @@ section {
     padding: 0;
 }
 
-/* Central vertical line */
 .timeline::before {
     content: '';
     position: absolute;
@@ -474,7 +472,6 @@ section {
     background: var(--primary-color);
 }
 
-/* Each row occupies the full width; children float left/right */
 .timeline-item {
     position: relative;
     width: 100%;
@@ -483,7 +480,6 @@ section {
     align-items: flex-start;
 }
 
-/* Dot — centred on the line */
 .timeline-dot {
     position: absolute;
     left: 50%;
@@ -499,7 +495,6 @@ section {
     flex-shrink: 0;
 }
 
-/* Content card — takes up ~45% of the row */
 .timeline-content {
     width: 45%;
     padding: 1.5rem;
@@ -510,7 +505,6 @@ section {
     position: relative;
 }
 
-/* Arrow pointer towards the centre line */
 .timeline-content::after {
     content: '';
     position: absolute;
@@ -521,13 +515,12 @@ section {
     border-bottom: 10px solid transparent;
 }
 
-/* ODD items → left side */
 .timeline-item:nth-child(odd) {
     justify-content: flex-start;
 }
 
 .timeline-item:nth-child(odd) .timeline-content {
-    margin-right: calc(55%);   /* push card to left half */
+    margin-right: calc(55%);
 }
 
 .timeline-item:nth-child(odd) .timeline-content:hover {
@@ -536,7 +529,6 @@ section {
     border-color: var(--primary-color);
 }
 
-/* Arrow points right (toward centre) on left cards */
 .timeline-item:nth-child(odd) .timeline-content::after {
     right: -10px;
     border-left: 10px solid var(--border-color);
@@ -546,13 +538,12 @@ section {
     border-left-color: var(--primary-color);
 }
 
-/* EVEN items → right side */
 .timeline-item:nth-child(even) {
     justify-content: flex-end;
 }
 
 .timeline-item:nth-child(even) .timeline-content {
-    margin-left: calc(55%);    /* push card to right half */
+    margin-left: calc(55%);
 }
 
 .timeline-item:nth-child(even) .timeline-content:hover {
@@ -561,7 +552,6 @@ section {
     border-color: var(--primary-color);
 }
 
-/* Arrow points left (toward centre) on right cards */
 .timeline-item:nth-child(even) .timeline-content::after {
     left: -10px;
     border-right: 10px solid var(--border-color);
@@ -571,7 +561,6 @@ section {
     border-right-color: var(--primary-color);
 }
 
-/* Timeline text styles */
 .timeline-date {
     color: var(--primary-color);
     font-weight: 600;
@@ -615,9 +604,39 @@ section {
     font-weight: bold;
 }
 
+/* Extra bullets — hidden by default, shown via JS */
+.extra-bullets {
+    display: none;
+}
+
+.extra-bullets.open {
+    display: contents;
+}
+
+/* See more / See less button */
+.see-more-btn {
+    margin-top: 0.75rem;
+    background: none;
+    border: 1px solid var(--border-color);
+    color: var(--primary-color);
+    font-family: 'Poppins', sans-serif;
+    font-size: 0.82rem;
+    font-weight: 500;
+    padding: 5px 14px;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: background 0.2s ease, border-color 0.2s ease, color 0.2s ease;
+    display: inline-block;
+}
+
+.see-more-btn:hover {
+    background: var(--primary-color);
+    border-color: var(--primary-color);
+    color: var(--bg-dark);
+}
+
 /* ── Responsive: collapse to single-side on small screens ─────────────────── */
 @media (max-width: 768px) {
-    /* Restore left-side line */
     .timeline::before {
         left: 16px;
         transform: none;
@@ -634,7 +653,6 @@ section {
         transform: translateY(-50%);
     }
 
-    /* Both odd and even stack left */
     .timeline-item:nth-child(odd) .timeline-content,
     .timeline-item:nth-child(even) .timeline-content {
         width: calc(100% - 48px);
@@ -642,7 +660,6 @@ section {
         margin-right: 0;
     }
 
-    /* Remove arrows on mobile */
     .timeline-content::after {
         display: none;
     }

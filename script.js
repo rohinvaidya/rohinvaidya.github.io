@@ -52,7 +52,7 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         e.preventDefault();
         const target = document.querySelector(this.getAttribute('href'));
         if (target) {
-            const offsetTop = target.offsetTop - 80; // Account for fixed navbar
+            const offsetTop = target.offsetTop - 80;
             window.scrollTo({
                 top: offsetTop,
                 behavior: 'smooth'
@@ -197,6 +197,20 @@ const heroImage = document.querySelector('.profile-img');
 if (heroImage) {
     const img = new Image();
     img.src = heroImage.src;
+}
+
+// See more / See less toggle for experience bullets
+function toggleBullets(btn) {
+    const extra = btn.previousElementSibling.querySelector('.extra-bullets');
+    const isOpen = extra.classList.contains('open');
+
+    if (isOpen) {
+        extra.classList.remove('open');
+        btn.textContent = 'See more \u2193';
+    } else {
+        extra.classList.add('open');
+        btn.textContent = 'See less \u2191';
+    }
 }
 
 console.log('Portfolio website loaded successfully!');
