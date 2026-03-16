@@ -446,121 +446,210 @@ section {
     transform: scale(1.05);
 }
 
-/* Experience Section */
-.experience {
+/* ── Alternating Timeline ─────────────────────────────────────────────────── */
+
+.experience,
+.education {
     background: var(--bg-secondary);
 }
 
+/* Outer wrapper — centres the line */
 .timeline {
     position: relative;
-    max-width: 900px;
+    max-width: 1000px;
     margin: 0 auto;
-    padding-left: 2rem;
+    padding: 0;
 }
 
+/* Central vertical line */
 .timeline::before {
     content: '';
     position: absolute;
-    left: 0;
+    left: 50%;
     top: 0;
     bottom: 0;
     width: 2px;
+    transform: translateX(-50%);
     background: var(--primary-color);
 }
 
+/* Each row occupies the full width; children float left/right */
 .timeline-item {
     position: relative;
+    width: 100%;
     margin-bottom: 3rem;
+    display: flex;
+    align-items: flex-start;
 }
 
+/* Dot — centred on the line */
 .timeline-dot {
     position: absolute;
-    left: -2.5rem;
-    top: 0;
+    left: 50%;
+    top: 1.5rem;
+    transform: translate(-50%, -50%);
     width: 16px;
     height: 16px;
     border-radius: 50%;
     background: var(--primary-color);
     border: 4px solid var(--bg-secondary);
     box-shadow: 0 0 0 4px var(--primary-color), var(--glow-orange);
+    z-index: 1;
+    flex-shrink: 0;
 }
 
+/* Content card — takes up ~45% of the row */
 .timeline-content {
+    width: 45%;
     padding: 1.5rem;
     background: var(--bg-tertiary);
     border-radius: 12px;
-    margin-left: 2rem;
     border: 1px solid var(--border-color);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
 }
 
-.timeline-content:hover {
-    transform: translateX(10px);
+/* Arrow pointer towards the centre line */
+.timeline-content::after {
+    content: '';
+    position: absolute;
+    top: 1.5rem;
+    width: 0;
+    height: 0;
+    border-top: 10px solid transparent;
+    border-bottom: 10px solid transparent;
+}
+
+/* ODD items → left side */
+.timeline-item:nth-child(odd) {
+    justify-content: flex-start;
+}
+
+.timeline-item:nth-child(odd) .timeline-content {
+    margin-right: calc(55%);   /* push card to left half */
+}
+
+.timeline-item:nth-child(odd) .timeline-content:hover {
+    transform: translateX(-8px);
     box-shadow: var(--glow-orange);
     border-color: var(--primary-color);
 }
 
+/* Arrow points right (toward centre) on left cards */
+.timeline-item:nth-child(odd) .timeline-content::after {
+    right: -10px;
+    border-left: 10px solid var(--border-color);
+}
+
+.timeline-item:nth-child(odd) .timeline-content:hover::after {
+    border-left-color: var(--primary-color);
+}
+
+/* EVEN items → right side */
+.timeline-item:nth-child(even) {
+    justify-content: flex-end;
+}
+
+.timeline-item:nth-child(even) .timeline-content {
+    margin-left: calc(55%);    /* push card to right half */
+}
+
+.timeline-item:nth-child(even) .timeline-content:hover {
+    transform: translateX(8px);
+    box-shadow: var(--glow-orange);
+    border-color: var(--primary-color);
+}
+
+/* Arrow points left (toward centre) on right cards */
+.timeline-item:nth-child(even) .timeline-content::after {
+    left: -10px;
+    border-right: 10px solid var(--border-color);
+}
+
+.timeline-item:nth-child(even) .timeline-content:hover::after {
+    border-right-color: var(--primary-color);
+}
+
+/* Timeline text styles */
 .timeline-date {
     color: var(--primary-color);
     font-weight: 600;
     margin-bottom: 0.5rem;
+    font-size: 0.9rem;
 }
 
 .timeline-content h3 {
-    font-size: 1.5rem;
-    margin-bottom: 0.5rem;
+    font-size: 1.25rem;
+    margin-bottom: 0.4rem;
     color: var(--text-primary);
 }
 
 .timeline-content h4 {
-    font-size: 1.125rem;
+    font-size: 1rem;
     color: var(--text-secondary);
     margin-bottom: 1rem;
 }
 
-.experience-list {
-    list-style: none;
-    padding-left: 0;
-}
-
-.experience-list li {
-    position: relative;
-    padding-left: 1.5rem;
-    margin-bottom: 0.75rem;
-    color: var(--text-secondary);
-}
-
-.experience-list li::before {
-    content: '▹';
-    position: absolute;
-    left: 0;
-    color: var(--primary-color);
-    font-weight: bold;
-}
-
-/* Education Section */
-.education {
-    background: var(--bg-secondary);
-}
-
+.experience-list,
 .education-list {
     list-style: none;
     padding-left: 0;
 }
 
+.experience-list li,
 .education-list li {
     position: relative;
     padding-left: 1.5rem;
     margin-bottom: 0.75rem;
     color: var(--text-secondary);
+    font-size: 0.95rem;
 }
 
+.experience-list li::before,
 .education-list li::before {
     content: '▹';
     position: absolute;
     left: 0;
     color: var(--primary-color);
     font-weight: bold;
+}
+
+/* ── Responsive: collapse to single-side on small screens ─────────────────── */
+@media (max-width: 768px) {
+    /* Restore left-side line */
+    .timeline::before {
+        left: 16px;
+        transform: none;
+    }
+
+    .timeline-item {
+        flex-direction: column;
+        justify-content: flex-start !important;
+    }
+
+    .timeline-dot {
+        left: 16px;
+        top: 1rem;
+        transform: translateY(-50%);
+    }
+
+    /* Both odd and even stack left */
+    .timeline-item:nth-child(odd) .timeline-content,
+    .timeline-item:nth-child(even) .timeline-content {
+        width: calc(100% - 48px);
+        margin-left: 48px;
+        margin-right: 0;
+    }
+
+    /* Remove arrows on mobile */
+    .timeline-content::after {
+        display: none;
+    }
+
+    .timeline-item:nth-child(odd) .timeline-content:hover,
+    .timeline-item:nth-child(even) .timeline-content:hover {
+        transform: translateX(4px);
+    }
 }
 
 /* Services Section */
@@ -845,14 +934,6 @@ section {
     .image-container {
         width: 300px;
         height: 300px;
-    }
-
-    .timeline {
-        padding-left: 1.5rem;
-    }
-
-    .timeline-content {
-        margin-left: 1.5rem;
     }
 }
 
