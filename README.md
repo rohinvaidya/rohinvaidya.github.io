@@ -37,9 +37,7 @@ rohinvaidya.github.io/
 ├── script.js           # JavaScript for interactions
 ├── web/
 │   ├── images/         # Images and assets
-│   ├── fonts/          # Custom fonts
-│   ├── icons/          # Icons
-│   └── data/           # JSON data (for reference)
+│   └── fonts/          # Custom fonts
 └── README.md           # This file
 ```
 
