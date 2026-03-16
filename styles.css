@@ -1,4 +1,4 @@
-/* Reset and Base Styles */
+﻿/* Reset and Base Styles */
 * {
     margin: 0;
     padding: 0;
@@ -395,6 +395,7 @@ section {
 
 .skills-content {
     display: grid;
+    grid-template-columns: repeat(2, 1fr);
     gap: 2rem;
 }
 
@@ -938,6 +939,10 @@ section {
 }
 
 @media (max-width: 768px) {
+    .skills-content {
+        grid-template-columns: 1fr;
+    }
+
     .nav-menu {
         position: fixed;
         left: -100%;
