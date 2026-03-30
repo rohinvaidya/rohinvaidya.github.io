@@ -781,6 +781,21 @@ section {
     opacity: 1;
 }
 
+.project-image--logo img {
+    object-fit: contain;
+    padding: 1.5rem;
+    background: var(--bg-secondary);
+}
+
+.project-image--placeholder {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--bg-secondary);
+    color: var(--text-muted);
+    font-size: 3rem;
+}
+
 .project-link, .project-link-static {
     width: 60px;
     height: 60px;

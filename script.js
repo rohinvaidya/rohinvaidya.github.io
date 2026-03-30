@@ -164,25 +164,13 @@ projectCards.forEach(card => {
     projectObserver.observe(card);
 });
 
-// Add active state to navigation based on scroll position
-window.addEventListener('scroll', () => {
-    let current = '';
-    const sections = document.querySelectorAll('section');
-
-    sections.forEach(section => {
-        const sectionTop = section.offsetTop;
-        const sectionHeight = section.clientHeight;
-        if (pageYOffset >= (sectionTop - 200)) {
-            current = section.getAttribute('id');
-        }
-    });
-
-    navLinks.forEach(link => {
-        link.classList.remove('active');
-        if (link.getAttribute('href') === `#${current}`) {
-            link.classList.add('active');
-        }
-    });
+// Set active nav link based on current page URL
+const currentPage = window.location.pathname.split('/').pop() || 'index.html';
+navLinks.forEach(link => {
+    link.classList.remove('active');
+    if (link.getAttribute('href') === currentPage) {
+        link.classList.add('active');
+    }
 });
 
 // Update copyright year

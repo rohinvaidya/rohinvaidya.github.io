@@ -139,4 +139,4 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE.md) f
 
 If you found this portfolio helpful, please give it a star ⭐
 
-Copyright (c) 2025 Rohin Vaidya
+Copyright (c) 2026 Rohin Vaidya
