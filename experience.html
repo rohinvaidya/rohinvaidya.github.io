@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Rohin Vaidya - Professional Experience | Software Engineer at Oracle & Connyct">
     <meta name="author" content="Rohin Vaidya">
+    <script>if(localStorage.getItem('theme')==='light')document.documentElement.classList.add('light-mode');</script>
     <title>Rohin Vaidya | Experience</title>
 
     <!-- Font Awesome -->
@@ -28,11 +29,6 @@
             <div class="nav-brand">
                 <a href="index.html">Rohin Vaidya</a>
             </div>
-            <button class="nav-toggle" id="navToggle">
-                <span></span>
-                <span></span>
-                <span></span>
-            </button>
             <ul class="nav-menu" id="navMenu">
                 <li><a href="index.html" class="nav-link">Home</a></li>
                 <li><a href="index.html#about" class="nav-link">About</a></li>
@@ -42,6 +38,16 @@
                 <li><a href="projects.html" class="nav-link">Projects</a></li>
                 <li><a href="index.html#contact" class="nav-link">Contact</a></li>
             </ul>
+            <div class="nav-controls">
+                <button class="theme-toggle" id="themeToggle" aria-label="Toggle light mode">
+                    <i class="fas fa-sun"></i>
+                </button>
+                <button class="nav-toggle" id="navToggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
         </div>
     </nav>
 

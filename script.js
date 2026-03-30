@@ -1,3 +1,17 @@
+// Theme toggle
+const themeToggle = document.getElementById('themeToggle');
+
+if (localStorage.getItem('theme') === 'light') {
+    themeToggle.querySelector('i').className = 'fas fa-moon';
+}
+
+themeToggle.addEventListener('click', () => {
+    document.documentElement.classList.toggle('light-mode');
+    const isLight = document.documentElement.classList.contains('light-mode');
+    themeToggle.querySelector('i').className = isLight ? 'fas fa-moon' : 'fas fa-sun';
+    localStorage.setItem('theme', isLight ? 'light' : 'dark');
+});
+
 // Mobile Navigation Toggle
 const navToggle = document.getElementById('navToggle');
 const navMenu = document.getElementById('navMenu');

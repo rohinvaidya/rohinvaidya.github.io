@@ -10,6 +10,7 @@
     --secondary-color: #ff8c42;
     --text-primary: #e0e0e0;
     --text-secondary: #a0a0a0;
+    --text-muted: #606060;
     --bg-primary: #0f0f0f;
     --bg-secondary: #1a1a1a;
     --bg-tertiary: #252525;
@@ -1033,4 +1034,53 @@ section {
     .section-title {
         font-size: 1.75rem;
     }
+}
+
+/* ── Theme Toggle Button ───────────────────────────────────────────────────── */
+.nav-controls {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+.theme-toggle {
+    background: none;
+    border: 1px solid var(--border-color);
+    border-radius: 50%;
+    width: 36px;
+    height: 36px;
+    cursor: pointer;
+    color: var(--text-secondary);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.9rem;
+    flex-shrink: 0;
+    transition: border-color 0.3s ease, color 0.3s ease, background 0.3s ease;
+}
+
+.theme-toggle:hover {
+    border-color: var(--primary-color);
+    color: var(--primary-color);
+    background: var(--bg-tertiary);
+}
+
+/* ── Light Mode ────────────────────────────────────────────────────────────── */
+html.light-mode {
+    --text-primary: #1a2535;
+    --text-secondary: #4a6a8a;
+    --text-muted: #7090b0;
+    --bg-primary: #f0f6ff;
+    --bg-secondary: #e3efff;
+    --bg-tertiary: #d6e8ff;
+    --bg-dark: #e8f3ff;
+    --border-color: #b8d4f0;
+    --shadow-sm: 0 1px 2px 0 rgba(70, 130, 180, 0.15);
+    --shadow-md: 0 4px 6px -1px rgba(70, 130, 180, 0.2);
+    --shadow-lg: 0 10px 15px -3px rgba(70, 130, 180, 0.25);
+    --shadow-xl: 0 20px 25px -5px rgba(70, 130, 180, 0.3);
+}
+
+html.light-mode .navbar {
+    background: rgba(240, 246, 255, 0.95);
 }
