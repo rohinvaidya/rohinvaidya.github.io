@@ -1084,3 +1084,14 @@ html.light-mode {
 html.light-mode .navbar {
     background: rgba(240, 246, 255, 0.95);
 }
+
+html.light-mode .footer {
+    background: #1a2535;
+    color: #e0e0e0;
+}
+
+html.light-mode .footer-social a {
+    color: #e0e0e0;
+    background: rgba(255, 255, 255, 0.06);
+    border-color: rgba(255, 255, 255, 0.15);
+}
